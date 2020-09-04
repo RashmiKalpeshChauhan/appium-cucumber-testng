@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="63739" started-at="2020-09-04T21:44:07 GST" finished-at="2020-09-04T21:45:11 GST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="63739" started-at="2020-09-04T21:44:07 GST" finished-at="2020-09-04T21:45:11 GST">
+      <class name="com.mobile.tests.NewTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mobile.tests.NewTest@10d59286]" name="beforeTest" is-config="true" duration-ms="42604" started-at="2020-09-04T21:44:07 GST" finished-at="2020-09-04T21:44:50 GST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8.0.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Any device Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="invalidUsername()[pri:0, instance:com.mobile.tests.NewTest@10d59286]" name="invalidUsername" duration-ms="20707" started-at="2020-09-04T21:44:50 GST" finished-at="2020-09-04T21:45:11 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidUsername -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.mobile.tests.NewTest@10d59286]" name="afterTest" is-config="true" duration-ms="250" started-at="2020-09-04T21:45:11 GST" finished-at="2020-09-04T21:45:11 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.mobile.tests.NewTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
