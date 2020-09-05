@@ -28,12 +28,12 @@ public class TenantPage extends BasePage {
 	}
 	public TenantPage clickDropDown () {
 		 click(dropDown);
-//		 try {
-//			Thread.sleep(10000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		 try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		 
 		//List<WebElement> list = optionlist;
 		// optionlist.get(2).click();
@@ -50,6 +50,10 @@ public class TenantPage extends BasePage {
 	}
 	public TenantPage clickExploreLink () {
 		click(exploreLink);
+		return this;
+	}
+	public TenantPage isSigninButtonPrsent(){
+		find(signin,10);
 		return this;
 	}
 }

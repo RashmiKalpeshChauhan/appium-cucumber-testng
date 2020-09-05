@@ -19,9 +19,9 @@ public class HomeScreen {
 	public void selectoption() {
 	  new TenantPage().clickDropDown();
 	}
-	@When("User is on the Signin page")
+	@When("User click on signin link")
 	public void userIsOnTheSigninPage() {
-		System.out.println("Hi this is Sreedhar2");
+		new TenantPage().clickSignIn();
 	}
 
 	@When("User clicks on the close icon")
@@ -32,6 +32,10 @@ public class HomeScreen {
 	@When("User is on the home page")
 	public void userIsOnTheHomePage() {
 		System.out.println("Hi this is Sreedhar4");
+	}
+	@Then(" User is on the home page")
+	public void signInbuttonVisible() {
+		new TenantPage().isSigninButtonPrsent();
 	}
 
 //	@When("User taps on Join free for 7 days link")

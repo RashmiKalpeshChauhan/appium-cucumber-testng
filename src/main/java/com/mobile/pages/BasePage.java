@@ -79,10 +79,7 @@ public class BasePage {
 	        utils.log().info(msg + txt);
 	        return txt;
 	    }
-	    public List<MobileElement> getlist(MobileElement e) {
-	    	List<MobileElement> elementsTwo = (List<MobileElement>) e;
-			return elementsTwo;
-	    }
+	   
 	    public void closeApp() {
 	        ((InteractsWithApps) driver).closeApp();
 	    }

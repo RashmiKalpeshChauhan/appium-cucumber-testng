@@ -4,9 +4,9 @@ Feature: Login scenarios
 Scenario: Verify user is taken to Singin Screen after clicking singin button
 When User taps on the Tenant DropDown select option
 And user click on load config button
-And User is on the Signin page
+And User click on signin link
 And User clicks on the close icon
-And User is on the home page
+Then User is on the home page
 
 
 #@SignUp
