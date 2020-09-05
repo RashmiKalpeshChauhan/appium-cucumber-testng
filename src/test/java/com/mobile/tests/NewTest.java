@@ -2,11 +2,11 @@ package com.mobile.tests;
 
 import org.testng.annotations.Test;
 
-import com.mobile.BaseTest;
+
 import com.mobile.pages.TenantPage;
 
 
-public class NewTest extends BaseTest {
+public class NewTest {
  
 
   @Test

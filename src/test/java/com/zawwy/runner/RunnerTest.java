@@ -1,5 +1,10 @@
 package com.zawwy.runner;
 
+
+
+import org.apache.logging.log4j.ThreadContext;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 //import io.cucumber.testng.CucumberOptions;
 //import io.cucumber.testng.FeatureWrapper;
 //import io.cucumber.testng.PickleWrapper;
@@ -12,8 +17,12 @@ import org.junit.runner.RunWith;
 //import org.testng.annotations.Parameters;
 //import org.testng.annotations.Test;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import utils.DriverManager;
+import utils.GlobalParams;
+import utils.ServerManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "StepDefinitions" }, plugin = { "pretty",
@@ -21,9 +30,42 @@ import io.cucumber.junit.CucumberOptions;
          )
 
 public class RunnerTest {
+	@BeforeClass
+    public static void initialize() throws Exception {
+		 GlobalParams params = new GlobalParams();
+	        params.initializeGlobalParams();
 
+	      ThreadContext.put("ROUTINGKEY", params.getPlatformName() + "_"
+	                + params.getDeviceName());
+
+	        new ServerManager().startServer();
+	        new DriverManager().initializeDriver();
+    }
+
+    @AfterClass
+    public static void quit(){
+    	      DriverManager driverManager = new DriverManager();
+        if(driverManager.getDriver() != null){
+            driverManager.getDriver().quit();
+            driverManager.setDriver(null);
+        }
+        ServerManager serverManager = new ServerManager();
+        if(serverManager.getServer() != null){
+            serverManager.getServer().stop();
+        }
+    }
+//        DriverManager driverManager = new DriverManager();
+//        if(driverManager.getDriver() != null){
+//            driverManager.getDriver().quit();
+//            driverManager.setDriver(null);
+//        }
+//        ServerManager serverManager = new ServerManager();
+//        if(serverManager.getServer() != null){
+//            serverManager.getServer().stop();
+//        }
+//    }
 //	private TestNGCucumberRunner testNGCucumberRunner;
-//	
+////	
 //    @Parameters({"platformName","platformVersion","deviceName"})
 //	@BeforeClass(alwaysRun = true)
 //	public void setUpClass(String platformName,String platformVersion,String deviceName  ) {

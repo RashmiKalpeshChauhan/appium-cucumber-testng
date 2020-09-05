@@ -7,13 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.mobile.BaseTest;
-
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utils.TestUtils;
 
-public class TenantPage extends BaseTest {
+public class TenantPage extends BasePage {
 	@AndroidFindBy(id="net.gadm.tv.beta:id/tenants_selector_holder")private MobileElement tenantId;
 	@AndroidFindBy(id="net.gadm.tv.beta:id/select_tenant_button")private MobileElement tenantButton;
 	@AndroidFindBy(className="android.widget.ListView")private MobileElement dropdown;
@@ -21,10 +20,7 @@ public class TenantPage extends BaseTest {
 	@AndroidFindBy(id="net.gadm.tv.beta:id/close_button")private MobileElement closeButton;
 	@AndroidFindBy(id="net.gadm.tv.beta:id/select_operator_spinner")private MobileElement dropDown;
 	@AndroidFindBy(id="net.gadm.tv.beta:id/explore_btn")private MobileElement exploreLink;
-	
-	
-
-	
+	@AndroidFindBy(className="android.widget.CheckedTextView")private List<MobileElement> optionlist;	
 
 	public TenantPage clickTenantBtn () {
 		click(tenantButton);
@@ -32,14 +28,16 @@ public class TenantPage extends BaseTest {
 	}
 	public TenantPage clickDropDown () {
 		 click(dropDown);
-		 try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		  List<WebElement> list = driver.findElements(By.className("android.widget.CheckedTextView"));
-		 list.get(2).click();
+//		 try {
+//			Thread.sleep(10000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		 
+		//List<WebElement> list = optionlist;
+		// optionlist.get(2).click();
+		 optionlist.get(2).click();
 		 return this;
 	}
 	public TenantPage clickSignIn () {
