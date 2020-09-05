@@ -28,15 +28,16 @@ public class HomeScreen {
 	public void userClicksOnTheCloseIcon() {
 		 new TenantPage().clickCloseButton();
 	}
-
-	@When("User is on the home page")
-	public void userIsOnTheHomePage() {
-		System.out.println("Hi this is Sreedhar4");
-	}
-	@Then(" User is on the home page")
+	
+	@Then("User is on the home page")
 	public void signInbuttonVisible() {
 		new TenantPage().isSigninButtonPrsent();
 	}
+	@When("User click on signup button")
+	public void userClicksOnTheSignUpButton() {
+		 new TenantPage().clickSingUpBtn();
+	}
+	
 
 //	@When("User taps on Join free for 7 days link")
 //	public void userTapsOnJoinFreeForDaysLink(Integer int1) {

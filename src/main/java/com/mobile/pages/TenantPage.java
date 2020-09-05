@@ -21,6 +21,8 @@ public class TenantPage extends BasePage {
 	@AndroidFindBy(id="net.gadm.tv.beta:id/select_operator_spinner")private MobileElement dropDown;
 	@AndroidFindBy(id="net.gadm.tv.beta:id/explore_btn")private MobileElement exploreLink;
 	@AndroidFindBy(className="android.widget.CheckedTextView")private List<MobileElement> optionlist;	
+	@AndroidFindBy(id="net.gadm.tv.beta:id/sign_up_link")private MobileElement signUp;
+	
 
 	public TenantPage clickTenantBtn () {
 		click(tenantButton);
@@ -55,5 +57,10 @@ public class TenantPage extends BasePage {
 	public TenantPage isSigninButtonPrsent(){
 		find(signin,10);
 		return this;
+	}
+	public TenantPage clickSingUpBtn() {
+		click(signUp);
+		return this;
+		
 	}
 }

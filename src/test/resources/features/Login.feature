@@ -1,24 +1,9 @@
 Feature: Login scenarios
 
-@GuestUser
+@SignInLink
 Scenario: Verify user is taken to Singin Screen after clicking singin button
 When User taps on the Tenant DropDown select option
 And user click on load config button
 And User click on signin link
 And User clicks on the close icon
 Then User is on the home page
-
-
-#@SignUp
-#Scenario: Validate user can access available countries link
-#When User taps on Join free for 7 days link
-#And User should see available countries link
-#And User clicks on available countries link
-#Then User should see list of countries
-
-#@SignUp
-#Scenario: Verify user is taken to Singup Screen after clicking signin button 
-#When User taps on Join free for 7 days link
-#And User should see sign in link
-#And User clicks on sign in link
-#Then Sign up button should appear.
