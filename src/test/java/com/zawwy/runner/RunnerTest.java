@@ -26,7 +26,7 @@ import utils.ServerManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "StepDefinitions" }, plugin = { "pretty",
-		"html:target/cucumber","de.monochromata.cucumber.report.PrettyReports:target/cucumber" },monochrome = true,strict=true,tags = { "@GuestUser" }
+		"html:target/cucumber","de.monochromata.cucumber.report.PrettyReports:target/cucumber-html-reports" },monochrome = true,strict=true,tags = { "@GuestUser" }
          )
 
 public class RunnerTest {
