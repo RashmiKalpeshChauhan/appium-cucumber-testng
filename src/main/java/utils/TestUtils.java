@@ -46,8 +46,10 @@ public static final long WAIT=20;
 //	}
 //	return stringMap;
 //}
+
 public Logger log() {
-	return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
+//	return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
+	return LogManager.getLogger(TestUtils.class.getName());
 }
 
 }

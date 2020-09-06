@@ -26,7 +26,7 @@ import utils.ServerManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "StepDefinitions" }, plugin = { "pretty",
-		"html:target/cucumber" },monochrome = true,strict=true,tags = { "@GuestUser" }
+		"html:target/cucumber","de.monochromata.cucumber.report.PrettyReports:target/cucumber" },monochrome = true,strict=true,tags = { "@GuestUser" }
          )
 
 public class RunnerTest {
@@ -54,37 +54,6 @@ public class RunnerTest {
             serverManager.getServer().stop();
         }
     }
-//        DriverManager driverManager = new DriverManager();
-//        if(driverManager.getDriver() != null){
-//            driverManager.getDriver().quit();
-//            driverManager.setDriver(null);
-//        }
-//        ServerManager serverManager = new ServerManager();
-//        if(serverManager.getServer() != null){
-//            serverManager.getServer().stop();
-//        }
-//    }
-//	private TestNGCucumberRunner testNGCucumberRunner;
-////	
-//    @Parameters({"platformName","platformVersion","deviceName"})
-//	@BeforeClass(alwaysRun = true)
-//	public void setUpClass(String platformName,String platformVersion,String deviceName  ) {
-//		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-//	}
-//
-//	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
-//	public void scenario(PickleWrapper pickle, FeatureWrapper cucumberFeature) throws Throwable {
-//		testNGCucumberRunner.runScenario(pickle.getPickle());
-//	}
-//
-//	@DataProvider
-//	public Object[][] scenarios() {
-//		return testNGCucumberRunner.provideScenarios();
-//	}
-//
-//	@AfterClass(alwaysRun = true)
-//	public void tearDownClass() {
-//		testNGCucumberRunner.finish();
-//	}
+
 
 }

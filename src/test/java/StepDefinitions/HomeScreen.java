@@ -1,67 +1,62 @@
 package StepDefinitions;
 
-import com.mobile.pages.TenantPage;
+
+
+import com.mobile.pages.HomePage;
+import com.mobile.pages.SigninPage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class HomeScreen {
-
-	@When("User taps on the Singin link")
-	public void userTapsOnTheSinginLink() {
-	  new TenantPage().clickSignIn();
-	}
-	@When("user click on load config button")
-	public void userTapsOnTheLoadConfig() {
-	  new TenantPage().clickTenantBtn();
-	}
-	@When("User taps on the Tenant DropDown select option")
-	public void selectoption() {
-	  new TenantPage().clickDropDown();
-	}
-	@When("User click on signin link")
-	public void userIsOnTheSigninPage() {
-		new TenantPage().clickSignIn();
-	}
-
+	
+	@When("User clicks SignIn Button")
+	public void userClickOnSignInButton() {
+	  new HomePage().clickSignInBtn();
+	}	
 	@When("User clicks on the close icon")
-	public void userClicksOnTheCloseIcon() {
-		 new TenantPage().clickCloseButton();
+	public void userClickOnCloseButton() {
+	  new SigninPage().clickCloseBtn();
 	}
-	
-	@Then("User is on the home page")
-	public void signInbuttonVisible() {
-		new TenantPage().isSigninButtonPrsent();
-	}
-	@When("User click on signup button")
-	public void userClicksOnTheSignUpButton() {
-		 new TenantPage().clickSingUpBtn();
-	}
-	
+	@When("User is on the home page")
+	public void signinBtnDisplayed() {
+	  new HomePage().isSignInBtnDisplayed();
+	}	
 
-//	@When("User taps on Join free for 7 days link")
-//	public void userTapsOnJoinFreeForDaysLink(Integer int1) {
-//	    // Write code here that turns the phrase above into concrete actions
-//		System.out.println("Hi this is Sreedhar4");
-//	}
-//
-//	@When("User should see available countries link")
-//	public void userShouldSeeAvailableCountriesLink() {
-//	    // Write code here that turns the phrase above into concrete actions
-//		System.out.println("Hi this is Sreedhar4");
-//	}
-//
-//	@When("User clicks on available countries link")
-//	public void userClicksOnAvailableCountriesLink() {
-//	    // Write code here that turns the phrase above into concrete actions
-//		System.out.println("Hi this is Sreedhar4");
-//	}
-//
-//	@Then("User should see list of countries")
-//	public void userShouldSeeListOfCountries() {
-//	    // Write code here that turns the phrase above into concrete actions
-//		System.out.println("Hi this is Sreedhar4");
-//	}
+	@When("User taps on the Explore JawwyTV link")
+	public void userTapsOnTheSinginLink() {
+	  new HomePage().clickExploreBtn();
+	}
+	
+	@When("User clicks SignUp Button")
+	public void userClicksOnTheCloseIcon() {		 
+		 new SigninPage().clickSignUp();
+	}
+	
+	@When("User clicks SignIn on popup")
+	public void signInbuttonVisible() {
+		new SigninPage().popUpCloseBtn();
+	}
+	@When("User navigates to Live TV screen")
+	public void userClicksOnTheSignUpButton() {
+		 new HomePage().clickMenu();
+		 new SigninPage().clickLiveTv();
+	}
+	
+	@When("User should see available countries link")
+	public void userShouldSeeAvailableCountriesLink() {
+		 new SigninPage().availableCountryLinkDisplayed();
+	}
+
+	@When("User clicks on available countries link")
+	public void userClicksOnAvailableCountriesLink() {
+		new SigninPage().availableCountryLink();
+	}
+
+	@Then("User should see list of countries")
+	public void userShouldSeeListOfCountries() {
+		new SigninPage().availableCountryLinkDisplayed();
+	}
 
 
 }

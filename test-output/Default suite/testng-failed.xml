@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.zawwy.runner.RunnerTest">
+      <class name="com.mobile.tests.NewTest">
         <methods>
-          <include name="tearDownClass"/>
-          <include name="scenario"/>
-          <include name="setUpClass"/>
+          <include name="invalidUsername"/>
         </methods>
-      </class> <!-- com.zawwy.runner.RunnerTest -->
+      </class> <!-- com.mobile.tests.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

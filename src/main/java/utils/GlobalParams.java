@@ -55,7 +55,7 @@ public class GlobalParams {
         GlobalParams params = new GlobalParams();
         params.setPlatformName(System.getProperty("platformName", "Android"));
         params.setUDID(System.getProperty("udid", "ce11160bda21483003"));
-        params.setDeviceName(System.getProperty("deviceName", "Samsung Galaxy S7 edge"));
+        params.setDeviceName(System.getProperty("deviceName", "Samsung"));
         params.setSystemPort(System.getProperty("systemPort", "10000"));
         params.setChromeDriverPort(System.getProperty("chromeDriverPort", "11000"));
     }
